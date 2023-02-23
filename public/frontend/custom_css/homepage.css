@@ -1,0 +1,7 @@
+.bg-dark-transparent {
+    background: rgba(0, 0, 0, 0.3) !important;
+}
+
+#mainpage {
+    padding-bottom:0px!important;
+}

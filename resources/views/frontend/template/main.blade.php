@@ -1,0 +1,7 @@
+@include('frontend.template.head')
+@yield('customcss')
+@include('frontend.template.navbar')
+@yield('maincontent')
+@include('frontend.template.footer')
+@include('frontend.template.scripts')
+@yield('customjs')

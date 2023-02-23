@@ -1,0 +1,110 @@
+/*custom css for ltr file*/
+.sptb-normal {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+.sptb-new {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.sptb-new .single-page{
+	margin-bottom: 50px;
+}
+.sptb-only-bottom{
+	margin-bottom: 5rem;
+}
+.watchlist{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.single-page .wrapper h3 {
+    font-size: 22px;
+    color: #080e1b;
+    margin-top: 40px;
+}
+#mainpage {
+    padding-bottom: 105px;
+}
+
+#btn-save-invoice-settings{
+	background-color:#C23B3E!important;
+	margin-top: 35px;
+}
+
+.footer-main a {
+    line-height: 2;
+    transition: opacity .2s;
+    color: #fff;
+}
+.footer-main img {
+    width: 140px;
+}
+
+.postmainform {
+    margin-bottom: 50px;
+}
+
+.gross-margin
+{
+    margin-top:30px;
+}
+
+.bannerstyle{
+     padding-top: 5rem;
+     height: 20px !important;
+     background: url({{ url('frontend/images/banners/banner2.jpg') }}) center center;
+}
+.wdt-100{
+    width:100%;
+}
+.imgs-div-flow{
+    max-height:150px;
+    overflow:auto;
+}
+.img-office-one{
+    width:30px;
+    height:30px;
+    margin-top:-10px;
+}
+.image-heightoverflow{
+    height:500px;overflow:auto;
+}
+.fbbg{
+    background:#166FE5;
+}
+.insbg
+{
+    background:linear-gradient(45deg,#405DE6,#5851DB,#833AB4,#C13584,#E1306C,#FD1D1D);
+}
+/* Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) { 
+
+}
+
+/*// X-Small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+
+.sptb-normal {
+     padding-top:0rem; 
+     padding-bottom:0rem; 
+}
+#mainpage {
+    padding-bottom: 50px;
+}
+
+button#btn-post-ad {
+    display: block;
+    margin: 0 auto;
+}
+
+.sptb-new {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+}
+
+
+
+/*custom css for ltr file*/
