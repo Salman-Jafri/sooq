@@ -33,11 +33,7 @@
 							</div>
 							<div class="name">
 								<input type="text" name="contact" id="member_contact" class="isnumber" required="">
-								<label>Contact</label>
-							</div>
-							<div class="name">
-								<input type="email" name="email" id="member_email">
-								<label>Email</label>
+								<label>Mobile Number</label>
 							</div>
 							<div class="mail">
 								<input type="text" class="nospace" name="username" id="username" required="">
