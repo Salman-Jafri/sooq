@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AdminLoginController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\User\AdController;
 
 
 //Front end routes
@@ -31,6 +32,8 @@ Route::name("user.")->group( function()
 	Route::group(['middleware' => 'auth'], function(){
 
         // Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
+		Route::post('/ads/create',[AdController::class, 'create'])->name('ads.create');
+
 		Route::post('/logout',[UserController::class, 'logout'])->name('logout');
 
 	});
