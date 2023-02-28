@@ -20,14 +20,13 @@ class UserController extends Controller
     {
         $request->validate(
             [
-                "email" => "required|email|unique:users,email",
                 "username" => "required|unique:users,username|min:6",
                 "password" => "required|min:6",
             ]);
 
         $user = User::create([
             'name' => $request->name,
-            'email' => $request->email,
+            'member_contact' => $request->contact,
             'password' => Hash::make($request->password),
             'username' => $request->username,
         ]);
@@ -47,15 +46,21 @@ class UserController extends Controller
 
     public function authenticate(Request $request)
     {
+        // Value For store In Sessions After User Login
+        // $this->session->rwtech_member_loggedin=TRUE;
+        // $this->session->member_username = $this->input->post('username');
+        // $this->session->rwtech_member_id = $r->uid;
+        // $this->session->rwtech_sub_member_id = 'none';
+        // $this->session->userrole = 'member';
 
-        if(Auth::attempt(["email" => $request->email, "password" => $request->password], $request->filled("remember")))
+        if(Auth::attempt(["username" => $request->username, "password" => $request->password], $request->filled("remember")))
         {
             return redirect()->route("index");
         }
         else
         {
             throw ValidationException::withMessages([
-                "email" => "Invalid Email/Password"
+                "email" => "Invalid Usename/Password"
             ]);
         }
 

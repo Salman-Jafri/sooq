@@ -21,10 +21,10 @@
 									<span id="response-msg" class="text-left"></span>
 								</div>
 							</div>
-                            <div class="mail">
-								<input type="email" name="email" id="email" required="">
-								<label>Email</label>
-                                @error('email')
+                            <div class="username">
+								<input type="text" name="username" id="username" required="">
+								<label>Username</label>
+                                @error('username')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
