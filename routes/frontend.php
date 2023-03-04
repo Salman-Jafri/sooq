@@ -11,6 +11,9 @@ use App\Http\Controllers\User\AdController;
 //Front end routes
 
 Route::get('/', [FrontendController::class, 'index'])->name('index');
+Route::get('/access-denied', function(){
+    return "access denied";
+})->name('access_denied');
 
 // User routes
 Route::name("user.")->group( function()
@@ -29,8 +32,11 @@ Route::name("user.")->group( function()
 
     //all authenticated routes
 
-	Route::group(['middleware' => 'auth'], function(){
+	Route::group(['middleware' => ['auth','permissions']], function(){
 
+        Route::get('/dashboard', function (Request $request) {
+            return "Dashboard visible";
+        })->name('dashboard');
         // Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
 		Route::post('/ads/create',[AdController::class, 'create'])->name('ads.create');
 

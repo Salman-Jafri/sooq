@@ -55,6 +55,10 @@ class UserController extends Controller
 
         if(Auth::attempt(["username" => $request->username, "password" => $request->password], $request->filled("remember")))
         {
+            $user = Auth::user();
+            //using qrstatus just for testing purpose
+            $permissions = ["dashboard"=> $user->qr_status, "dashboard1"=> $user->qr_status];
+            session(['permissions' => $permissions]);
             return redirect()->route("index");
         }
         else
@@ -71,6 +75,7 @@ class UserController extends Controller
     public function logout(Request $request)
     {
         Auth::logout();
+        $request->session()->invalidate();
         return redirect()->route('user.login');
     }
 }
